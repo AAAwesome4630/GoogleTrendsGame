@@ -1,0 +1,23 @@
+<head>
+  <title>GoogleTrendsGame</title>
+</head>
+
+<body>
+{{#if gameNotStarted}}
+    <div id="content-title">
+    <h1 id="title">The <img style="vertical-align:middle" id="googleLogo" src="https://upload.wikimedia.org/wikipedia/commons/3/30/Googlelogo.png" width="300px"/> Trends Game</h1>
+  </div>
+  <div id="content-form">
+
+    <form class="new-questions">
+      <h4>Number of Questions</h4>
+        <input type="number" name="number" placeholder=" From 1 to 10" min="1" max="10" />
+        <input type = "submit" value = "Submit">
+    </form>
+  </div>
+{{else}}
+      {{#each games}}
+        {{> game}}
+      {{/each}}
+{{/if}}
+</body>
